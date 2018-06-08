@@ -2,13 +2,13 @@
 
 <%=  
 require 'rubygems'
-require 'net/ssh'
+require 'net-ssh'
 
 @hostname = "ceziam.com"
 @username = "root"
 @password = "ill3matic"
 # @cmd = "ruby /home/tmp/test_scan.rb"
-@cmd = "nmap -oX output2.xml -p 80 lewagon.com"
+@cmd = "nmap -oX output2.xml -p 80,3389 lewagon.com"
 
  begin
     ssh = Net::SSH.start(@hostname, @username, :password => @password)
